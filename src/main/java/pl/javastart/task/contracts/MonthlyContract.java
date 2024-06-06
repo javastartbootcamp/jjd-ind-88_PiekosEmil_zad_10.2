@@ -8,22 +8,22 @@ public class MonthlyContract extends Contract {
     }
 
     @Override
-    public void sendSms() {
+    void sendSms() {
         smsSents += 1;
     }
 
     @Override
-    public void call(int seconds) {
+    void call(int seconds) {
         secondsUsed += seconds / 60;
     }
 
     @Override
-    public void sendMms() {
+    void sendMms() {
         mmsSents += 1;
     }
 
     @Override
-    public void printAccountState() {
+    void printAccountState() {
         System.out.println("\n=== STAN KONTA ===");
         System.out.println("Wysłanych SMSów: " + smsSents);
         System.out.println("Wysłanych MMSów: " + mmsSents);

@@ -13,7 +13,7 @@ public class MixContract extends Contract {
     }
 
     @Override
-    public void sendSms() {
+    void sendSms() {
         if (smsNumber > 0) {
             smsNumber -= 1;
         } else {
@@ -23,7 +23,7 @@ public class MixContract extends Contract {
     }
 
     @Override
-    public void call(int seconds) {
+    void call(int seconds) {
         if (minutesNumber > 0) {
             minutesNumber -= seconds / 60;
         } else {
@@ -33,7 +33,7 @@ public class MixContract extends Contract {
     }
 
     @Override
-    public void sendMms() {
+    void sendMms() {
         if (mmsNumber > 0) {
             mmsNumber -= 1;
         } else {
@@ -43,12 +43,11 @@ public class MixContract extends Contract {
     }
 
     @Override
-    public void printAccountState() {
+    void printAccountState() {
         System.out.println("\n=== STAN KONTA ===");
         System.out.println("Wysłanych SMSów: " + smsSents);
         System.out.println("Wysłanych MMSów: " + mmsSents);
         System.out.println("Liczba sekund rozmowy: " + secondsUsed);
         System.out.println("Dodatkowo wykorzystane środki " + fundsUsed + "zł");
     }
-
 }

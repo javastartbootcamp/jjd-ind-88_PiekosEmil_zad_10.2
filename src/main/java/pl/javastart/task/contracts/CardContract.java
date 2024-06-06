@@ -7,7 +7,7 @@ public class CardContract extends Contract {
     }
 
     @Override
-    public void sendSms() {
+    void sendSms() {
         if (availableFunds > 0) {
             availableFunds -= SMS_COST;
             smsSents += 1;
@@ -18,7 +18,7 @@ public class CardContract extends Contract {
     }
 
     @Override
-    public void call(int seconds) {
+    void call(int seconds) {
         if (availableFunds > 0) {
             availableFunds -= ((double) seconds / 60) * CALL_COST_PER_MINUTE;
             secondsUsed += seconds;
@@ -29,7 +29,7 @@ public class CardContract extends Contract {
     }
 
     @Override
-    public void sendMms() {
+    void sendMms() {
         if (availableFunds > 0) {
             availableFunds -= MMS_COST;
             mmsSents += 1;
@@ -41,7 +41,7 @@ public class CardContract extends Contract {
     }
 
     @Override
-    public void printAccountState() {
+    void printAccountState() {
         System.out.println("\n=== STAN KONTA ===");
         System.out.println("Wysłanych SMSów: " + smsSents);
         System.out.println("Wysłanych MMSów: " + mmsSents);
