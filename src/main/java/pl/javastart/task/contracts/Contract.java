@@ -16,4 +16,9 @@ public abstract class Contract {
     abstract void sendMms();
 
     abstract void printAccountState();
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

@@ -12,6 +12,7 @@ public class Phone {
     }
 
     public void printAccountState() {
+        System.out.print("\n" + toString());
         contract.printAccountState();
     }
 
@@ -21,5 +22,10 @@ public class Phone {
 
     public void call(int seconds) {
         contract.call(seconds);
+    }
+
+    @Override
+    public String toString() {
+        return "" + contract;
     }
 }

@@ -49,4 +49,8 @@ public class CardContract extends Contract {
         System.out.printf("Pozostało na koncie %.2fzł\n", availableFunds);
     }
 
+    @Override
+    public String toString() {
+        return "Type of contract: Card Contract";
+    }
 }
